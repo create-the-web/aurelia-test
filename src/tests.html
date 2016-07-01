@@ -1,0 +1,19 @@
+<template>
+  <div class="container">
+    <h2>${heading}</h2>
+    <div class="row">
+      <ul>
+        <li repeat.for="number of numbers">
+          ${number}
+          <a click.delegate="remove($index)">X</a>
+        </li>
+      </ul>
+    </div>
+    <div class="row">
+      <form submit.trigger="add(newitem)">
+        <input type="text" value.bind="newitem">
+        <input type="submit" value="ADD ${newitem}">
+      </form>
+    </div>
+  </div>
+</template>
